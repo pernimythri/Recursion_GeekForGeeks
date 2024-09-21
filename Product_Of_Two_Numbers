@@ -1,0 +1,23 @@
+import java.util.*;
+class Solution
+{
+    int Product_Of_Two_Numbers(int x,int y)
+    {
+      if(x<y)
+      {
+          return Product_Of_Two_Numbers(y,x);
+      }
+      else if(y!=0)
+      return x+Product_Of_Two_Numbers(x,y-1);
+      else 
+      return 0;
+    }
+    public static void main(String[] args)
+    {
+        Solution obj = new Solution();
+        Scanner sc=new Scanner(System.in);
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        System.out.println(obj.Product_Of_Two_Numbers(x,y));
+    }
+}
