@@ -1,0 +1,24 @@
+Time Complexity : O(N)
+
+import java.util.*;
+class Solution
+{
+    static String Reverse_of_a_string(String str)
+    {
+        if(str.length()<=1)
+        return str;
+        else
+        {
+        return str.charAt(str.length()-1)+Reverse_of_a_string(str.substring(0,str.length()-1));
+        }
+    }
+public static void main(String[] args)
+{
+    Solution obj = new Solution();
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter String : ");
+    String str=sc.nextLine();
+    System.out.println(obj.Reverse_of_a_string(str));
+}
+}
+
