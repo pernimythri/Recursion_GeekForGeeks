@@ -1,0 +1,22 @@
+Time Complexity : O(N)
+
+import java.util.*;
+class Solution
+{
+    static int length_of_a_string(String str)
+    {
+      if(str.equals(""))
+      return 0;
+      else
+      return length_of_a_string(str.substring(1))+1;
+    }
+public static void main(String[] args)
+{
+    Solution obj = new Solution();
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter String : ");
+    String str=sc.nextLine();
+    System.out.println(obj.length_of_a_string(str));
+}
+}
+
