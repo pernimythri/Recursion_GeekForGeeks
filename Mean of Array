@@ -1,0 +1,29 @@
+Time Complexity : O(N)
+
+import java.util.*;
+class Solution
+{
+    static float Mean_of_array(int[] arr,int n)
+    {
+        if(n==1)
+        return (float) arr[0];
+        else
+        return (float)((Mean_of_array(arr,n-1)*(n-1)+arr[n-1])/n);
+    }
+
+public static void main(String[] args)
+{
+    Solution obj = new Solution();
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter size of array : ");
+    int n=sc.nextInt();
+    System.out.print("Enter values to array : ");
+    int[] arr=new int[n];
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=sc.nextInt();
+    }
+    System.out.println(obj.Mean_of_array(arr,n));
+}
+}
+
