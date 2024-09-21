@@ -1,0 +1,32 @@
+Time Complexity : O(2^sum)
+
+import java.util.*;
+
+class Solution
+{
+  int Count_ways_to_make_sum(int coins[], int n, int sum)
+    {
+        if (sum == 0)
+            return 1;
+        if (sum < 0)
+            return 0;
+        if (n <= 0)
+            return 0;
+        else
+           return Count_ways_to_make_sum(coins, n - 1, sum) + Count_ways_to_make_sum(coins, n, sum - coins[n - 1]);
+    }
+public static void main(String args[])
+	{
+		Solution obj=new Solution();
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		int[] arr=new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    arr[i]=sc.nextInt();
+	   }
+	   int required_sum=sc.nextInt();
+	   System.out.print(obj.Count_ways_to_make_sum(arr,n,required_sum));
+		
+	}
+}
