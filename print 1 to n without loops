@@ -1,0 +1,21 @@
+Time Complexity : O(N)
+import java.util.*;
+class Solution
+{
+    static void PrintNumbers(int n)
+    {
+        if(n>0)
+        {
+            PrintNumbers(n-1);
+            System.out.println(n+" ");
+    }
+}
+public static void main(String[] args)
+{
+    Solution obj = new Solution();
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter value of n : ");
+    int n=sc.nextInt();
+    obj.PrintNumbers(n);
+}
+}
