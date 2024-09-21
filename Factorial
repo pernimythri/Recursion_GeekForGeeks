@@ -1,0 +1,18 @@
+import java.util.*;
+class Solution{
+     int factorial(int n)
+    {
+        if(n==1)
+        return 1;
+        else
+        return factorial(n-1)*n;
+        
+    }
+    public static void main(String[] args)
+    {
+        Solution obj=new Solution();
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.print(obj.factorial(n));
+    }
+}
