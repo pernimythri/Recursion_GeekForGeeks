@@ -1,0 +1,55 @@
+**************** Minimum element ****************
+Time Complexity : O(N)
+
+import java.util.*;
+class Solution
+{
+    int minimum_element(int[] arr,int n)
+    {
+      if(n==1)
+      return arr[0];
+      else
+      return Math.min(arr[n-1],minimum_element(arr,n-1));
+}
+public static void main(String[] args)
+{
+    Solution obj=new Solution();
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int[] arr=new int[n];
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=sc.nextInt();
+    }
+    System.out.print(obj.minimum_element(arr,n));
+  }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**************** Maximum element ****************
+Time Complexity : O(N)
+
+import java.util.*;
+class Solution
+{
+    int minimum_element(int[] arr,int n)
+    {
+      if(n==1)
+      return arr[0];
+      else
+      return Math.max(arr[n-1],minimum_element(arr,n-1));
+}
+public static void main(String[] args)
+{
+    Solution obj=new Solution();
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int[] arr=new int[n];
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=sc.nextInt();
+    }
+    System.out.print(obj.minimum_element(arr,n));
+  }
+}
