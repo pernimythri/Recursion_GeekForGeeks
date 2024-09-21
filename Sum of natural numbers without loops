@@ -1,0 +1,23 @@
+Time Complexity : O(N)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+public:
+  int sum_of_natural_numbers(int n)
+{
+    if(n==1)
+    return n;
+    else
+    return n+sum_of_natural_numbers(n-1);
+}};
+int main()
+{
+    Solution obj;
+    int n;
+    cout<<"Enter value of n : ";
+    cin>>n;
+    cout<<obj.sum_of_natural_numbers(n);
+}
