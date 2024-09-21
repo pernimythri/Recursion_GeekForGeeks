@@ -1,0 +1,23 @@
+Time Complexity : O(log N)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+public:
+  int Decimal_to_Binary(int n)
+{
+    if(n==0)
+    return 0;
+    else
+    return (n%2+10*Decimal_to_Binary(n/2));
+}};
+int main()
+{
+    Solution obj;
+    int n;
+    cout<<"Enter value of n : ";
+    cin>>n;
+    cout<<obj.Decimal_to_Binary(n);
+}
