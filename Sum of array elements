@@ -1,0 +1,28 @@
+Time Complexity  : O(N)
+
+import java.util.*;
+class Solution
+{
+    static int Sum_of_Array_Elements(int[] arr,int n)
+    {
+        if(n==0)
+        return 0;
+        else
+        return Sum_of_Array_Elements(arr,n-1)+arr[n-1];
+    }
+public static void main(String[] args)
+{
+    Solution obj = new Solution();
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter size of array : ");
+    int n=sc.nextInt();
+    System.out.print("Enter values to array : ");
+    int[] arr=new int[n];
+    for(int i=0;i<n;i++)
+    {
+        arr[i]=sc.nextInt();
+    }
+    System.out.println(obj.Sum_of_Array_Elements(arr,n));
+}
+}
+
