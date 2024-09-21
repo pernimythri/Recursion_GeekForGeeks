@@ -1,0 +1,27 @@
+Time Complexity : O(N)
+
+import java.util.*;
+
+class Solution
+{
+  int CountSetBits(int n)
+   {
+	  if (n == 0)
+		return 0;
+		
+	if((n & 1) == 1)
+		return 1 + CountSetBits(n >> 1);
+	
+	else
+		return CountSetBits(n >> 1);
+}
+
+public static void main(String args[])
+	{
+		Solution obj=new Solution();
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		System.out.print(obj.CountSetBits(n));
+		
+	}
+}
